@@ -1,10 +1,16 @@
 import React from "react";
 import "./App.css";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import LandingPage from "./components/landing-page/LandingPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header" />
+      <Router>
+        <Switch>
+          <Route path="/" component={LandingPage} />
+        </Switch>
+      </Router>
     </div>
   );
 }
