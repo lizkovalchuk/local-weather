@@ -1,0 +1,13 @@
+@import "../common/vars.scss";
+
+@media screen and (max-width: $xs) {
+  #body__typography_h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 0.35em;
+  }
+  #body__typography_h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+}

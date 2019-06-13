@@ -4,7 +4,8 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 // import Paper from "@material-ui/core/Paper";
-import MyButton from "../layout/button";
+import CustomButton from "../common/button";
+import "./landing-page.scss";
 
 class LandingPage extends Component {
   constructor() {
@@ -15,18 +16,12 @@ class LandingPage extends Component {
   }
 
   render() {
-    const location = () => {
-      console.log("location getting hit");
-    };
-
-    location();
-
     return (
       <Container maxWidth="md">
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1" gutterBottom id="body__typography_h1">
           Local Weather App
         </Typography>
-        <Typography variant="h2" gutterBottom>
+        <Typography variant="h2" gutterBottom id="body__typography_h2">
           by Liz Kovalchuk
         </Typography>
         <Grid container spacing={3} justify="center">
@@ -37,7 +32,7 @@ class LandingPage extends Component {
           <Grid item xs={6}>
             {/* <Paper className={classes.paper}>xs=6</Paper> */}
             {/* <Button className={classes.root}>Get Location</Button> */}
-            <MyButton />
+            <CustomButton text="testing" />
           </Grid>
         </Grid>
       </Container>
