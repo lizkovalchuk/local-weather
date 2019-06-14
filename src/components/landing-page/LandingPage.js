@@ -6,19 +6,30 @@ import Grid from "@material-ui/core/Grid";
 // import Paper from "@material-ui/core/Paper";
 import CustomButton from "../common/button";
 import "./landing-page.scss";
+import axios from "axios";
 
 class LandingPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      lat: null,
-      long: null
+      object: ""
     };
   }
 
+  componentDidMount() {
+    axios
+      .get("https://fcc-weather-api.glitch.me/api/current?lon=43&lat=-79")
+      .then(res => this.setState({ object: res.data }));
+  }
+
   render() {
+    const { object } = this.state;
+    const { main } = object;
+
     return (
       <Container maxWidth="md">
+        {console.log(main)}
+
         <Typography variant="h1" gutterBottom id="body__typography_h1">
           Local Weather App
         </Typography>
