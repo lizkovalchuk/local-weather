@@ -11,7 +11,8 @@ class LandingPage extends Component {
   constructor() {
     super();
     this.state = {
-      location: ""
+      lat: null,
+      long: null
     };
   }
 
@@ -24,15 +25,13 @@ class LandingPage extends Component {
         <Typography variant="h2" gutterBottom id="body__typography_h2">
           by Liz Kovalchuk
         </Typography>
-        <Grid container spacing={3} justify="center">
+        <Grid container justify="center" id="body__typography_body1">
           <Typography variant="body1">
-            This App will ask for your current location. If it does not, click
-            on the button below.
+            Click the button below to get your location to see your local
+            weather.
           </Typography>
-          <Grid item xs={6}>
-            {/* <Paper className={classes.paper}>xs=6</Paper> */}
-            {/* <Button className={classes.root}>Get Location</Button> */}
-            <CustomButton text="testing" />
+          <Grid container item xs={6} justify="center" id="body__grid_button">
+            <CustomButton text="Get location" />
           </Grid>
         </Grid>
       </Container>

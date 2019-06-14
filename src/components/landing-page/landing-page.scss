@@ -1,13 +1,26 @@
 @import "../common/vars.scss";
 
-@media screen and (max-width: $xs) {
-  #body__typography_h1 {
+#body__typography_h1 {
+  text-align: center;
+  margin: 0.55em;
+  @media screen and (max-width: $xs) {
     font-size: 4rem;
-    text-align: center;
     margin-top: 0.35em;
   }
-  #body__typography_h2 {
+}
+
+#body__typography_h2 {
+  text-align: center;
+  @media screen and (max-width: $xs) {
     font-size: 1.75rem;
     text-align: center;
   }
+}
+
+#body__typography_body1 {
+  margin: 4em 0;
+}
+
+#body__grid_button {
+  margin-top: 4em;
 }
